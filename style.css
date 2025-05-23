@@ -1,0 +1,135 @@
+:root {
+    --bg: linear-gradient(135deg,#c9d6ff,#e2e2e2);
+    --card-bg: #fff;
+    --text: #333;
+    --accent: #28a745;
+    --accent-hover: #218838;
+    --item-bg: #f8f9fa;
+  }
+  body.dark {
+    --bg: #121212;
+    --card-bg: #1e1e1e;
+    --text: #e0e0e0;
+    --accent: #4caf50;
+    --accent-hover: #388e3c;
+    --item-bg: #2a2a2a;
+  }
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 60px;
+  }
+  .todo-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 28px;
+    width: 92%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .theme-toggle {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 0.9rem;
+  }
+  .input-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  input {
+    flex: 1;
+    padding: 12px 14px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    background: transparent;
+    color: var(--text);
+  }
+  button {
+    width: 48px;
+    background: var(--accent);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+  }
+  button:hover {
+    background: var(--accent-hover);
+    transform: scale(1.05);
+  }
+  .progress {
+    height: 6px;
+    background: #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--accent);
+    transition: 0.3s;
+  }
+  
+  /* Task List */
+  ul {
+    list-style: none;
+  }
+  li {
+    background: var(--item-bg);
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    animation: fadeSlideIn 0.4s ease;
+  }
+  li input[type="checkbox"] {
+    margin-right: 12px;
+    transform: scale(1.3);
+    accent-color: var(--accent);
+  }
+  li span {
+    flex: 1;
+    font-size: 1rem;
+  }
+  li span.completed {
+    text-decoration: line-through;
+    color: #888;
+    transition: all 0.3s ease;
+  }
+  li .delete {
+    margin-left: 10px;
+    color: #999;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  li .delete:hover {
+    color: red;
+    transform: scale(1.2);
+  }
+  
+  @keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideOut {
+    to { transform: translateX(110%); opacity: 0; height: 0; margin: 0; padding: 0; }
+  }
+  
+  

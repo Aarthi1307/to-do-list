@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animated To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Theme toggle -->
+  <label class="theme-toggle">
+    <input type="checkbox" id="themeSwitcher" /> Dark Mode
+  </label>
+
+  <main class="todo-card">
+    <h1>📝 To-Do List</h1>
+
+    <div class="input-bar">
+      <input id="taskInput" type="text" placeholder="Add a new task…" />
+      <button id="addBtn"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <div class="progress">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <ul id="taskList"></ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
