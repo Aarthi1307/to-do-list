@@ -18,7 +18,7 @@ A simple and interactive To-Do List web application built with **HTML**, **CSS**
 
 ## Demo
 You can see the live app here:  
-[Live Demo](https://aarthi1307.github.io/to-do-list/)
+[Live Demo](https://Aarthi1307.github.io/to-do-list/)
 
 ## Technologies Used
 - HTML5
